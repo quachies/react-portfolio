@@ -1,11 +1,19 @@
-import './App.css';
-import BucketList from './components/BucketList';
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bucket-app">
-      <BucketList />
-    </div>
+    <main className="main-area">
+      <div className="navbar-container">
+        <Header />
+      </div>
+      <Outlet />
+      <div className="footer-container">
+        <Footer />
+      </div>
+    </main>
   );
 }
 
